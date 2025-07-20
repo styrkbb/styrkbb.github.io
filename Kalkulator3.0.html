@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            header {
+                text-align: center;
+                background-color: aqua;
+                padding: 40px;
+                color: rgb(255, 0, 0);
+            }
+            nav {
+                text-align: center;
+                word-spacing: 0px;
+                font-family: fantasy;
+                background-color: aqua;
+                padding: 10px;
+            }
+            nav a {
+                color: black;
+                text-decoration: none;
+                font-size: larger;
+                padding: 10px 15px;
+            }
+            .Aktiv {
+                background-color: aquamarine;
+            }
+            .ButtonCalc {
+                padding: 15px;
+                background-color: azure;
+                width: 400px;
+            }
+            .Knapper {
+                background-color: beige;
+                border: none;
+                color: black;
+                width: 80px;
+                height: 80px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 30px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 40px;
+            }
+            .DisplayClass {
+                background-color: beige;
+                border: none;
+                width: 300px;
+                height: 70px;
+                border-radius: 50px;
+                padding: 0px 20px;
+                font-size: 30px;
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="Min forste HTML.html">Hjemside</a>
+            <a href="Om meg.html" style="word-spacing: 0px;">Om Styrk</a>
+            <a href="Bildekarusell.html">Bildekarusell</a>
+            <a href="Cosinus og sinus testsbb.no.html" style="word-spacing: 0px;">Cosinus og sinus</a>
+            <a href="Romgeometri testsbb.no.html">Romgeometri</a>
+            <a href="Kalkulator.html">Kalkulator</a>
+            <a class="Aktiv" href="Kalkulator3.0.html" style="word-spacing: 0px;">Kalkulator 3.0</a>
+            <a href="Test bilde.html" style="word-spacing: 0px;">Test Bilde</a>
+        </nav> 
+        <header>
+            <h1>Kalkulator 3.0</h1>
+            <p>Denne kalkulatoren kan du bruke akuratt som ein vanlig kalkulator</p>
+        </header>
+        <div class="ButtonCalc">
+            <input class="DisplayClass" onkeydown="DisplayEnter(event)" id="display"><br><br>
+            <div>
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('7')" value="7">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('8')" value="8">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('9')" value="9">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('+')" value="+"><br>
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('4')" value="4">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('5')" value="5">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('6')" value="6">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('-')" value="-"><br>
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('1')" value="1">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('2')" value="2">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('3')" value="3">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('*')" value="*"><br>
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('0')" value="0">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('.')" value=".">
+                <input class="Knapper" type="button" onclick="VisPaaSkjerm('/')" value="/">
+                <input class="Knapper" type="button" onclick="Kalkuler()" value="="><br>
+                <input class="Knapper" type="button" onclick="ClearSkjerm()" value="CE">
+            </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <a href="https://www.youtube.com/watch?v=I5kj-YsmWjM" style="text-decoration: none; color: black;" >Har hentet litt inspirasjon til html og javascript koden ikkje css koden:</a>
+    </body>
+    <script>
+        const display = document.getElementById("display")
+        function VisPaaSkjerm(input) {
+            display.value += input;
+        }
+        function ClearSkjerm() {
+            display.value = "";
+        }
+        function Kalkuler() {
+            display.value = eval(display.value);
+        }
+        function DisplayEnter(event) {
+            let key = event.key;
+            if (key === "Enter") {
+                display.value = eval(display.value);
+            }
+        }
+    </script>
+</html>
