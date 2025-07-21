@@ -24,10 +24,23 @@
                 font-size: larger;
                 font-family: courier;
             }
+            div.content {
+                padding:40px 16px;
+                height: auto;
+            }
+            @media screen and (max-width: 1200px) {
+                div.content {
+                    padding:80px 16px;
+                }
             @media screen and (max-width: 400px) {
-                ul a {
-                    text-align: center;
+                li a {
                     float: none;
+                }
+                nav {
+                    position: static;
+                }
+                div.content {
+                    padding:0 16px;
                 }
             }
             .Aktiv {
@@ -44,9 +57,11 @@
             <li><a href="github-test-with-viewport.html">Github-test-with-viewport</a></li>
             <li><a href="Kalkulator-with-viewport.html">Kalkulator-with-viewport</a></li>
         </nav>
-        <p>Dette er ein github side</p>
-        <p>Virker dette?</p>
-        <p>Siste test</p>
+        <div class="content">
+            <p>Dette er ein github side</p>
+            <p>Virker dette?</p>
+            <p>Siste test</p>
+        </div>
         
     </body>
 </html>
