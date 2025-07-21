@@ -11,17 +11,23 @@
                 color: rgb(255, 0, 0);
             }
             nav {
-                text-align: center;
-                word-spacing: 0px;
-                font-family: fantasy;
-                background-color: aqua;
-                padding: 10px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: beige;
+                position: fixed;
+                top: 0;
+                width: 100%;
             }
             nav a {
+                float; left;
+                display: block;
                 color: black;
+                text-align: center;
+                padding: 10px 15px;
                 text-decoration: none;
                 font-size: larger;
-                padding: 10px 15px;
             }
             .Aktiv {
                 background-color: aquamarine;
@@ -58,6 +64,9 @@
         </style>
     </head>
     <body>
+        <nav>
+            <li><a class="Aktiv" href="#home">Hjemside</a></li>
+        </nav>
         <header>
             <h1>Kalkulator</h1>
             <p>Denne kalkulatoren kan du bruke akuratt som ein vanlig kalkulator</p>
