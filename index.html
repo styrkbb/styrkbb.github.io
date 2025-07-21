@@ -10,18 +10,41 @@
                 text-decoration: none;
                 font-family: courier;
             }
+            nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: beige;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                }
+            li a {
+                float: left;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 10px 15px;
+                text-decoration: none;
+                font-size: larger;
+            }
+            .Aktiv {
+                background-color: aquamarine;
+            }
         </style>
     </head>
     <body>
+        <nav>
+            <li><a class="linkerkalkulator" href="Kalkulator.html">Kalkulator</a></li>
+            <li><a class="linkerkalkulator" href="https://github.com/">Github</a></li>
+            <li><a class="linkerkalkulator" href="Github_test.html">Github-test</a></li>
+            <li><a class="linkerkalkulator" href="github-test-with-viewport.html">Github-test-with-viewport</a></li>
+            <li><a class="linkerkalkulator" href="Kalkulator-with-viewport.html">Kalkulator-with-viewport</a></li>
+        </nav>
         <p>Dette er ein github side</p>
         <p>Virker dette?</p>
         <p>Siste test</p>
-        <nav>
-            <a class="linkerkalkulator" href="Kalkulator.html">Kalkulator</a>
-            <a class="linkerkalkulator" href="https://github.com/">Github</a>
-            <a class="linkerkalkulator" href="Github_test.html">Github-test</a>
-            <a class="linkerkalkulator" href="github-test-with-viewport.html">Github-test-with-viewport</a>
-            <a class="linkerkalkulator" href="Kalkulator-with-viewport.html">Kalkulator-with-viewport</a>
-        </nav>
+        
     </body>
 </html>
